@@ -1,3 +1,3 @@
-export function  alwaysReturn1() {
-  return 1;
+export function dices(values) {
+  return "1";
 }
