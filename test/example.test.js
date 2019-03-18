@@ -9,5 +9,6 @@ describe('example.js', () => {
       let result = dices(3);
       expect(result).equal(['1. 1 + 1 + 1']);
     });
+    
   });
 });
