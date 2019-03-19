@@ -39,7 +39,7 @@ describe('example.js', () => {
     });
     it(`case 9`, () => {
       let result = dices(9);
-      expect(result).eql(['1 + 2 + 6', '2 + 2 + 5', '2 + 3 + 4', '3 + 3 + 3']);
+      expect(result).eql(['1 + 2 + 6', '1 + 3 + 5', , '2 + 2 + 5', '1 + 4 + 4', '2 + 3 + 4', '3 + 3 + 3']);
     });
     it(`case 10`, () => {
       let result = dices(10);
@@ -51,7 +51,7 @@ describe('example.js', () => {
     });
     it(`case 12`, () => {
       let result = dices(12);
-      expect(result).eql(['1 + 5 + 6', '2 + 4 + 6', '3 + 3 + 6', '3 + 4 + 5']);
+      expect(result).eql(['1 + 5 + 6', '2 + 4 + 6', '2 + 5 + 5', '3 + 3 + 6', '3 + 4 + 5']);
     });
     it(`case 13`, () => {
       let result = dices(13);
