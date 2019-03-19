@@ -1,8 +1,9 @@
 const _ = require('lodash');
 
-function dices(num) {
+export function dices(num) {
+  
   if (num < 3 || num > 18) {
-    throw new Error('Impossible!');
+    return 'Impossible!';
   }
 
   let results = [];
@@ -21,4 +22,5 @@ function dices(num) {
 
 // console.log(dices(3));
 // console.log(dices(7));
-console.log(dices(12));
+// console.log(dices(13));
+// console.log(dices(14));
