@@ -39,7 +39,7 @@ describe('example.js', () => {
     });
     it(`case 9`, () => {
       let result = dices(9);
-      expect(result).eql(['1 + 2 + 6', '1 + 3 + 5', , '2 + 2 + 5', '1 + 4 + 4', '2 + 3 + 4', '3 + 3 + 3']);
+      expect(result).eql(['1 + 2 + 6', '1 + 3 + 5', '2 + 2 + 5', '1 + 4 + 4', '2 + 3 + 4', '3 + 3 + 3']);
     });
     it(`case 10`, () => {
       let result = dices(10);
