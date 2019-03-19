@@ -93,5 +93,6 @@ export class Dices {
 }
 
 let d = new Dices();
-let result = d.dices(2);
+let result = d.dices(3);
+console.log(result);
 d.printResult(result);
