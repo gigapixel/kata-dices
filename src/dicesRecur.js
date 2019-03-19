@@ -19,39 +19,24 @@ export class Dices {
     const remainScore = score - sumCurrentScore;
     const remainDices = totalDices - currentDices + 1; // นับตัวเองด้วย
 
-    //console.log("Enter Dices: ", currentDices, " remainScore: ", remainScore, " remainDices: ", remainDices);
-
-    // Last Dices
+    // Last Dices         
     if (currentDices >= totalDices
       && (remainScore > 0 && remainScore <= totalFace)
       && remainScore >= parentFace) {
-      // console.log("Return Normal");
-
-      // if (remainScore > 0 && remainScore <= totalFace
-      //   && remainScore >= parentFace) {
-
-          // Keep Result
-          resultItem.push(remainScore);
-          resultList.push(resultItem);
-      // }
-      
+     
+      // Keep Result
+      resultItem.push(remainScore);
+      resultList.push(resultItem);
+        
       return;
     }
 
     const availableFace = Math.floor(remainScore / remainDices);
     const ceilingFace = Math.ceil(remainScore / remainDices);
 
-    // Break condition
-    if (ceilingFace > totalFace) {
-      return;
-    }
-
-
-
-    for (let iFace = parentFace; iFace <= availableFace; iFace++) {
+    for (let iFace = parentFace; iFace <= availableFace && ceilingFace <= totalFace; iFace++) {
       
-      let newResultItem = [...resultItem, iFace];
-      //console.log(" Data: ", newResultItem);
+      let newResultItem = [...resultItem, iFace];      
       this.dicesRecursive(totalDices, totalFace, score, 
         currentDices+1, iFace, sumCurrentScore + iFace, 
         newResultItem, resultList);
@@ -93,6 +78,5 @@ export class Dices {
 }
 
 let d = new Dices();
-let result = d.dices(3);
-console.log(result);
+let result = d.dices(8);
 d.printResult(result);

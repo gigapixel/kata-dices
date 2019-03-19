@@ -1,10 +1,10 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 
-import { Dices } from '../src/toro';
+import { Dices } from '../src/dicesRecur';
 
 describe('dices.js', () => {
-  describe('dics(1)', () => {
+  describe('dics(0)', () => {
     it('should return 1', () => {
       let d = new Dices();
       let result = d.dices(0);
