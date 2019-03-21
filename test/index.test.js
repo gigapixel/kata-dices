@@ -71,5 +71,15 @@ describe(' index.js ', () => {
       let result = dices(18);
       expect(result).eql(['6+6+6']);
     });
+
+    it(`should return impossible when input eql 1`, () => {
+      let result = dices(1);
+      expect(result).eql('impossible');
+    });
+
+    it(`should return impossible when input eql 20`, () => {
+      let result = dices(20);
+      expect(result).eql('impossible');
+    });
   });
 });
