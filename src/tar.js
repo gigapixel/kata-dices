@@ -8,11 +8,13 @@ export class Dices {
 
     dices(score) {
         let result = [];
-        let fin = false;
+        result.push([]);
+        let fin = (score < 3 || score > 18);
         let a = 1,
             b = 1,
             c = 1;
-        while ((score >= 3 && score <= 18) && !fin) {
+
+        while (!fin) {
 
             fin = a === 6 && b === 6 && c === 6;
 
@@ -26,27 +28,30 @@ export class Dices {
 
         result = _.uniqWith(result, _.isEqual);
         result.shift();
+
+        let resultText = result.length > 0 ? '' : 'Impossible';
+        result.map((val, idx) => {
+            const str = (idx + 1) + '. ' + val.join('+') + '\n';
+            resultText += str;
+        });
+        console.log(resultText);
         return result;
     }
-
-
-    printResult(score) {
-        const data = this.dices(score);
-
-        let result = data.length > 0 ? '' : 'Impossible';
-        data.forEach((val, idx) => {
-            const str = (idx + 1) + '. ' + val.join('+') + '\n';
-            result += str;
-        });
-        console.log(result);
-    }
-
-
 }
 
 const d = new Dices();
-console.log('10 -------');
-d.printResult(11);
+console.log('-----------------');
+d.dices(10);
+console.log('-----------------');
+d.dices(11);
+console.log('-----------------');
+d.dices(12);
+console.log('-----------------');
+d.dices(13);
+console.log('-----------------');
+d.dices(14);
+console.log('-----------------');
+d.dices(15);
 
 // console.log('4 -------');
 // d.printResult(4);
