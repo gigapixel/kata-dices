@@ -18,7 +18,8 @@ export class Dices {
 
     const remainScore = score - sumCurrentScore;
     const remainDices = totalDices - currentDices + 1; // นับตัวเองด้วย
-
+    const avg = remainScore / remainDices;
+    
     // Last Dices         
     if (currentDices >= totalDices
       && (remainScore > 0 && remainScore <= totalFace)
@@ -29,12 +30,9 @@ export class Dices {
       resultList.push(resultItem);
         
       return;
-    }
+    }    
 
-    const availableFace = Math.floor(remainScore / remainDices);
-    const ceilingFace = Math.ceil(remainScore / remainDices);
-
-    for (let iFace = parentFace; iFace <= availableFace && ceilingFace <= totalFace; iFace++) {
+    for (let iFace = parentFace; iFace <= Math.floor(avg) && Math.ceil(avg) <= totalFace; iFace++) {
       
       let newResultItem = [...resultItem, iFace];      
       this.dicesRecursive(totalDices, totalFace, score, 
