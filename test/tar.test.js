@@ -1,21 +1,13 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 
-import { Dices } from '../src/dicesRecur';
+import { Dices } from '../src/tar';
 
 describe('dices.js', () => {
   describe('dics(0)', () => {
     it('should return 1', () => {
       let d = new Dices();
       let result = d.dices(0);
-      expect(result).deep.equal([]);
-    });
-  });
-
-  describe("dics(1)", () => {
-    it("should return 1", () => {
-      let d = new Dices();
-      let result = d.dices(1);
       expect(result).deep.equal([]);
     });
   });
@@ -185,6 +177,4 @@ describe('dices.js', () => {
       expect(result).deep.equal([[6, 6, 6]]);
     });
   });
-
-
 });
