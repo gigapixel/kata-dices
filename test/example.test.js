@@ -5,14 +5,14 @@ import { dices } from '../src/example';
 
 describe('example.js', () => {
   describe('dices()', () => {
-    // it(`case < 3`, () => {
-    //   let result = dices(2);
-    //   expect(result).eql(['impossible']);
-    // });
-    // it(`case > 18`, () => {
-    //   let result = dices(88);
-    //   expect(result).eql(['impossible']);
-    // });
+    it(`case < 3`, () => {
+      let result = dices(2);
+      expect(result).eql(['impossible']);
+    });
+    it(`case > 18`, () => {
+      let result = dices(88);
+      expect(result).eql(['impossible']);
+    });
     it(`case 3`, () => {
       let result = dices(3);
       expect(result).eql(['1 + 1 + 1']);
@@ -39,7 +39,7 @@ describe('example.js', () => {
     });
     it(`case 9`, () => {
       let result = dices(9);
-      expect(result).eql(['1 + 2 + 6', '1 + 3 + 5', '1 + 4 + 4', '2 + 2 + 5','2 + 3 + 4', '3 + 3 + 3']);
+      expect(result).eql(['1 + 2 + 6', '1 + 3 + 5', '1 + 4 + 4', '2 + 2 + 5', '2 + 3 + 4', '3 + 3 + 3']);
     });
     it(`case 10`, () => {
       let result = dices(10);
