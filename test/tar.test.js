@@ -1,7 +1,8 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 
-import { Dices } from '../src/tar';
+// import { Dices } from '../src/tar';
+import { Dices } from '../src/dicesSimple';
 
 describe('dices.js', () => {
   describe('dics(0)', () => {
@@ -178,3 +179,4 @@ describe('dices.js', () => {
     });
   });
 });
+
